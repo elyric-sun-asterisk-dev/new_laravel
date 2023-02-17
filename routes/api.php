@@ -89,3 +89,8 @@ Route::middleware(['auth:sanctum', 'abilities:user'])->group(function () {
 Route::get('hello', function () {
     return 'Hello, world!';
 });
+Route::get('testing/{testing}', function ($testing) {
+    return response()->json([
+        "data: " => $testing
+    ]);
+});
