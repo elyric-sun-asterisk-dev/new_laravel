@@ -84,4 +84,8 @@ Route::middleware(['auth:sanctum', 'abilities:user'])->group(function () {
         Route::patch('logout', 'logout');
         Route::get('user/{user}', 'visitUser');
     });
+    Route::get('hello', function () {
+        return 'Hello, world!';
+    });
+    
 });
